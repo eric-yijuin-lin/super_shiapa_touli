@@ -5,5 +5,10 @@ app = Flask(__name__)
 def hello():
     return 'Hello'
 
+@app.route("/debug", methods=["GET"])
+def debug():
+    my_num = 123
+    return my_num
+
 if __name__ == '__main__':
     app.run(debug=True)
